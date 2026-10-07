@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "gds2itvg: unit-potential grid files for surface-electrode ion traps from GDSII layouts"
+type: software
+authors:
+  - family-names: Knollmann
+    given-names: Felix
+version: 0.1.0
+license: GPL-3.0-or-later
+repository-code: "https://github.com/felixknollmann/electrode"
+keywords:
+  - ion trap
+  - surface electrode
+  - electrostatics
+  - GDSII
+references:
+  - type: software
+    title: "electrode: numeric tools for Paul traps"
+    authors:
+      - family-names: Jördens
+        given-names: Robert
+    repository-code: "https://github.com/nist-ionstorage/electrode"
+    doi: 10.5281/zenodo.10118
+    license: GPL-3.0-or-later
+  - type: article
+    title: "Electrostatics of gapped and finite surface electrodes"
+    authors:
+      - family-names: Schmied
+        given-names: Roman
+    journal: "New Journal of Physics"
+    volume: 12
+    start: "023038"
+    year: 2010
+    doi: 10.1088/1367-2630/12/2/023038
+  - type: article
+    title: "Electrostatics of surface-electrode ion traps"
+    authors:
+      - family-names: Wesenberg
+        given-names: Janus H.
+    journal: "Physical Review A"
+    volume: 78
+    start: "063410"
+    year: 2008
+    doi: 10.1103/PhysRevA.78.063410

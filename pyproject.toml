@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]  # SPDX license string (PEP 639)
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gds2itvg"
+version = "0.1.0"
+description = "Unit-potential ITVG grid files for surface-electrode ion traps from GDSII layouts"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.10"
+authors = [{ name = "Felix Knollmann" }]
+keywords = ["ion trap", "surface electrode", "GDSII", "electrostatics", "ITVG"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = ["numpy>=2.0", "gdstk>=0.9", "shapely>=2.0", "scipy>=1.10"]
+
+[project.urls]
+Repository = "https://github.com/felixknollmann/electrode"
+
+[project.optional-dependencies]
+numba = ["numba>=0.58"]
+plot = ["matplotlib>=3.6"]
+test = ["pytest>=7", "numba>=0.58"]
+
+[project.scripts]
+gds2itvg = "gds2itvg.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: long-running tests"]
